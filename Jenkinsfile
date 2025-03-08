@@ -24,11 +24,6 @@ pipeline {
     }
     stage("deploy") {
       steps {
-        sh "mvn compile"
-      }
-    }
-    stage("deploy") {
-      steps {
         sh "java -jar /home/coder/.jenkins/workspace/PetClinicDeclarativePipeline/target/*.jar"
       }
     }     
